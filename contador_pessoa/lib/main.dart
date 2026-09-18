@@ -9,10 +9,35 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Container(
-        color: Colors.black,
-        alignment: Alignment.center,
-        child: Text("Hello World!"),
+      home: HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text('Pode entrar!',
+          style: TextStyle(
+            fontSize: 26,
+            color: Color.fromARGB(255, 4, 87, 154),
+            fontWeight: FontWeight.w700,
+          ),
+          ),
+          Text('0',
+            style: TextStyle(
+              fontSize: 26,
+              color: Color.fromARGB(255, 4, 87, 154),
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+        ],
       ),
     );
   }
